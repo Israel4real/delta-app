@@ -1,0 +1,23 @@
+{
+  "name": "delta-app",
+  "version": "1.0.0",
+  "description": "MEAN Stack",
+  "main": "app.js",
+  "scripts": {
+    "test": "mean",
+    "start": "node app"
+  },
+  "dependencies": {
+    "bcryptjs": "*",
+    "body-parser": "*",
+    "cors": "*",
+    "express": "*",
+    "jsonwebtoken": "*",
+    "mongoose": "*",
+    "morgan": "^1.8.2",
+    "passport": "*",
+    "passport-jwt": "*"
+  },
+  "author": "Israel Briggs",
+  "license": "ISC"
+}
