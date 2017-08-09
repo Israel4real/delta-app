@@ -30,18 +30,18 @@ require('./config/passport')(passport);
 
 
 //db connection
- mongoose.connect(config.database, function(err) {
-   if (err) {
-     console.log('Not connected to the database: ' + err);
-   } else {
-     console.log('Successfully connected to MongoDB');
-   }
- });
+mongoose.connect(config.database, function(err) {
+  if (err) {
+    console.log('Not connected to the database: ' + err);
+  } else {
+    console.log('Successfully connected to MongoDB');
+  }
+});
 
-// //get index
-// app.get('*', function(req, res) {
-//   res.sendFile(path.join(__dirname + '/public/app/views/index.html'));
-// });
+// get index
+app.get('*', function(req, res) {
+  res.sendFile(path.join(__dirname + '/public/app/views/index.html'));
+});
 
 
 //server port
