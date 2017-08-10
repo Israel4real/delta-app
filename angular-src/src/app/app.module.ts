@@ -14,9 +14,12 @@ import { RegisterComponent } from './components/register/register.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { HomeComponent } from './components/home/home.component';
+import { SignUpComponent } from './components/sign-up/sign-up.component';
 
 import { ValidateService } from './services/validate.service';
 import { AuthService } from './services/auth.service';
+import { BetaSignupService } from './services/beta-signup.service';
+
 
 
 @NgModule({
@@ -27,7 +30,8 @@ import { AuthService } from './services/auth.service';
     RegisterComponent,
     DashboardComponent,
     ProfileComponent,
-    HomeComponent
+    HomeComponent,
+    SignUpComponent
   ],
   imports: [
     BrowserModule,
@@ -36,7 +40,7 @@ import { AuthService } from './services/auth.service';
     AppRoutingModule,
     FlashMessagesModule
   ],
-  providers: [ValidateService, AuthService, AuthGuard],
+  providers: [ValidateService, AuthService, AuthGuard, BetaSignupService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
