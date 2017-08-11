@@ -49,6 +49,7 @@ export class SignUpComponent implements OnInit {
     this.betaSignupService.registerBetaSignup(betaSignup).subscribe(data => {
       if (data.success) {
         this._flashMessagesService.show(data.msg, {cssClass: 'alert-success', timeout: 3000 });
+        this.ngOnInit();
         this.router.navigate(['/sign-up']);
       } else {
         this._flashMessagesService.show(data.msg, {cssClass: 'alert-danger', timeout: 3000 });
